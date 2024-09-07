@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "estate_title": "Luxury Beach Resort",
+    "segment_name": "Resort",
+    "description": "Experience luxury at our beachfront resort with stunning ocean views.",
+    "price": "$500 per night",
+    "status": "Rent",
+    "area": "5000 sq ft",
+    "details":"Nestled on the shores of a tropical paradise island, our luxury beach resort offers an unparalleled experience of opulence and relaxation. With spacious rooms boasting breathtaking ocean views, guests are treated to the epitome of indulgence. Dive into our infinity pool, stroll along the pristine sands of our private beach, or rejuvenate your senses at our world-class spa. Fine dining options tantalize the palate, while the warm sea breeze whispers tranquility. Escape to a realm where luxury meets nature's beauty.",
+    "location": "Tropical Paradise Island",
+    "facilities": ["Infinity Pool", "Private Beach Access", "Spa", "Fine Dining Restaurants"],
+    "image": "https://i.ibb.co/JsJhhK9/luxury-beach-resort.jpg",
+    "button_text": "View Property"
+  },
+ 
+
+]
