@@ -1,23 +1,23 @@
 import { Link } from "react-router-dom";
 
 const EstateCard = ({Estate}) => {
-    const {id,estate_title,segment_name,description,price,status,area,location,facilities,image}=Estate;
+    const {id,title,SingleOrMess,description,Rent,status,Rentfrom,area,details,location,facilities,image}=Estate;
     return (
         <div  className="card card-compact w-96 rounded-2xl bg-white shadow-xl m-7">
         <div className=" py-4 px-2 rounded-2xl bg-slate-200"><figure><img className="rounded-2xl" src={image} alt="Shoes" /></figure></div>
         <div className="card-body">
-        <h2 className="card-title text-black font-bold text-2xl">{estate_title}</h2>
+        <h2 className="card-title text-black font-bold text-2xl">{title}</h2>
 
 <div className="flex space-x-24 text-black font-bold text-sm ">
 <div className="flex space-x-16">
 <h2><span className="text-black font-bold">Property No:</span> <span className="text-slate-600">{id}</span></h2>
-<h2><span className="text-black font-bold">Type:</span> <span className="text-slate-600">{segment_name}</span></h2>
+<h2><span className="text-black font-bold">Type:</span> <span className="text-slate-600">{title}</span></h2>
 
 </div>
 </div>
 <h2><span className="text-black font-bold">Description:</span> <span className="text-slate-600">{description}</span></h2>
 <div className="flex space-x-8">
-<h2><span className="text-black font-bold">Price:</span> <span className="text-slate-600">{price}</span></h2>
+<h2><span className="text-black font-bold">Rent:</span> <span className="text-slate-600">{Rent}</span></h2>
 <h2><span className="text-black font-bold">Status:</span> <span className="text-slate-600">{status}</span></h2>
 
 </div>

@@ -1,0 +1,6 @@
+
+const navLinkStyle=({isActive})=>{
+    return{
+       
+    }
+}

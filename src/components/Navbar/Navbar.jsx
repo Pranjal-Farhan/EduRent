@@ -21,15 +21,17 @@ const handleLogout=()=>{
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
      <li><NavLink to={'/'}>Home</NavLink></li>
+     <li><NavLink to="/ListedEstates/BookedEstates">Booked Estates</NavLink></li>
      <li><NavLink to={'/Update_Profile'}>Update Profile</NavLink></li>
      <li><NavLink to={'/User_Profile'}>User Profile</NavLink></li>
       </ul>
     </div>
-    <Link to={'/'}><a className="btn btn-ghost text-3xl font-extrabold text-black">Easy <span className="text-amber-700 ">Estate</span></a></Link>
+    <Link to={'/'}><a className="btn btn-ghost text-3xl font-extrabold text-black">Edu.<span className="text-amber-700 ">Rent</span></a></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     <li><NavLink to={'/'}>Home</NavLink></li>
+    <li><NavLink to="/ListedEstates/BookedEstates">Booked Estates</NavLink></li>
      <li><NavLink to={'/Update_Profile'}>Update Profile</NavLink></li>
      <li><NavLink to={'/User_Profile'}>User Profile</NavLink></li>
     </ul>
