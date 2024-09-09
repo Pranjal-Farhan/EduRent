@@ -4,15 +4,15 @@ const getBookedEstates=()=>{
    if(storedEstates){
     return JSON.parse(storedEstates)
    }
-   else{ return []}
+   return [];
 }
 const saveBookedEstates=id=>{
-    const savedEstates=getBookedEstates();
-    const exists=savedEstates.find(estateId=>estateId===id);
+    const storedEstates=getBookedEstates();
+    const exists=storedEstates.find(estateId=>estateId===id);
 
     if(!exists){
-        savedEstates.push(id);
-        localStorage.setItem('booked-estates', JSON.stringify(savedEstates))
+        storedEstates.push(id);
+        localStorage.setItem('booked-estates', JSON.stringify(storedEstates))
     }
 }
 const getMarkedEstates=()=>{
@@ -20,16 +20,16 @@ const getMarkedEstates=()=>{
     if(storedEstates){
      return JSON.parse(storedEstates)
     }
-    else{ return []}
+    return [];
  }
  const saveMarkedEstates=id=>{
-    const savedEstates=getMarkedEstates();
-    const exists=savedEstates.find(estateId=>estateId===id);
+    const storedEstates=getMarkedEstates();
+    const exists=storedEstates.find(estateId=>estateId===id);
 
     if(!exists){
-        savedEstates.push(id);
-        localStorage.setItem('marked-estates', JSON.stringify(savedEstates))
-    }
+        storedEstates.push(id);
+        localStorage.setItem('marked-estates', JSON.stringify(storedEstates))
+    } 
 }
 
 

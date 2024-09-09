@@ -10,10 +10,10 @@ const Estates= useLoaderData();
     return (
         <div>
 {/* slider */}
-<div className="text-center px-4">
-<div className="flex center">
-  <div>HERE WILL BE WITTING</div>
-  <div className="carousel w-1/2 rounded-2xl">
+<div className="text-center px-16 mt-8">
+<div className="flex center space-x-10 ">
+  <div className="text-black font-semibold text-justify w-3/4 p-10 pt-20">Welcome to EduRent, my name is Pranjal and I made this website for students like myself who want to find affordable accomodation in Rajshahi. We know how important it is to have a comfortable and affordable place to live during your academic journey. Whether you're searching for a cozy room, a shared apartment, or a larger space, EduRent offers a variety of options to suit your needs. Explore our easy-to-use listings and find a home that fits your budget and lifestyle.</div>
+  <div className="carousel w-4/5 rounded-2xl">
   <div id="slide1" className="carousel-item relative w-full">
     <img src="https://i.postimg.cc/kXSvMJSz/457210259-333550979840243-8791444614220254698-n.jpg" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

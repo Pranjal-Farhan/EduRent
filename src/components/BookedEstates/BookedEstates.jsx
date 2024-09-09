@@ -3,16 +3,16 @@ import { NavLink, useLoaderData } from "react-router-dom";
 import MarkedAndBooked from "../MarkedEstates/MarkedAndBooked";
 import { getBookedEstates } from "../../utilities/LocalStorage.";
 
-const BookedEstates = () => {
 
-    const estates= useLoaderData();
-    const [BookedEstates,setBookedEstates]=useState([]);
+const BookedEstates = () => {
+const estates= useLoaderData();
+const [BookedEstates,setBookedEstates]=useState([]);
     useEffect(()=>{
     const BookedEstatesId=getBookedEstates();
     if(estates.length>0){
          const estatesBooked=[];
         for(const id of BookedEstatesId){
-           const estate=estates.find(estate=>estate.estateId===id);
+           const estate=estates.find(estate=>estate.id===id);
            if(estate){estatesBooked.push(estate);}
            setBookedEstates(estatesBooked);
             console.log(estatesBooked);
@@ -36,8 +36,7 @@ const BookedEstates = () => {
 
 <div className="lg:text-left pl-8">
 <NavLink  to='/ListedEstates/BookedEstates'><button className="btn bg-transparent w-44 text-black hover:bg-gray-100 border-b-4 ">Booked Estates</button></NavLink>
-<NavLink to='/ListedEstates/Markedestates'><button className="btn bg-transparent w-44 text-black  hover:bg-gray-100 
-border-0">Marked Estates</button></NavLink>
+<NavLink to='/ListedEstates/MarkedEstates'><button className="btn bg-transparent w-44 text-black  hover:bg-gray-100 border-0">Marked Estates</button></NavLink>
 </div>
 
 

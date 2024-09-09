@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLoaderData } from "react-router-dom";
+import MarkedAndBooked from "../MarkedEstates/MarkedAndBooked";
 import { getMarkedEstates } from "../../utilities/LocalStorage.";
 
 
@@ -11,7 +12,7 @@ const MarkedEstatesId=getMarkedEstates();
 if(estates.length>0){
      const estatesMarked=[];
     for(const id of MarkedEstatesId){
-       const estate=estates.find(estate=>estate.estateId===id);
+       const estate=estates.find(estate=>estate.id===id);
        if(estate){estatesMarked.push(estate);}
        setMarkedEstates(estatesMarked);
         console.log(estatesMarked);
@@ -42,7 +43,7 @@ border-b-4">Marked Estates</button></NavLink>
 
      </div>
       <br />        
-    {MarkedEstates.map(estate=><MarkedEstates key={estate.estateId} estate={estate}></MarkedEstates>)
+    {MarkedEstates.map(estate=><MarkedAndBooked key={estate.estateId} estate={estate}></MarkedAndBooked>)
     }       
 
         </div>
