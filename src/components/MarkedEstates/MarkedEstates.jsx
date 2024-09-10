@@ -27,9 +27,9 @@ if(estates.length>0){
 <div className="text-center py-10">
 <select className="select select-accent text-black font-bold bg-lime-500 bg-opacity-80 max-w-xs ">
 <option disabled selected>Sort By</option>
-  <option>Rating</option>
-  <option>Number of Pages</option>
-  <option>Published Year</option>
+  <option>Rent</option>
+  <option>Availability</option>
+  <option>Facilities</option>
 </select></div>   
 <div>
 

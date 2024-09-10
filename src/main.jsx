@@ -16,6 +16,7 @@ import Register from './components/auth,login,register/Register';
 import AuthProvider from './Providers/AuthProvider';
 import MarkedEstates from './components/MarkedEstates/MarkedEstates';
 import BookedEstates from './components/BookedEstates/BookedEstates';
+import PrivateRoute from './components/privateRoute/privateRoute';
 
 const router = createBrowserRouter([
   {
@@ -30,26 +31,26 @@ const router = createBrowserRouter([
 },
 {
   path:'/ListedEstates/MarkedEstates',
-  element: <MarkedEstates></MarkedEstates>,
+  element: <PrivateRoute><MarkedEstates></MarkedEstates></PrivateRoute>,
   loader: ()=> fetch('../public/Estate Data/EstatesData.json')
 },
 {
   path:'/ListedEstates/BookedEstates',
-  element:<BookedEstates></BookedEstates>,
+  element:<PrivateRoute><BookedEstates></BookedEstates></PrivateRoute>,
   loader: ()=> fetch('../public/Estate Data/EstatesData.json')
 
 },
 {
   path:'/Update_Profile',
-  element:<UpdateProfile></UpdateProfile>,
+  element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>,
 },
 {
   path:'/User_Profile',
-  element:<UserProfile></UserProfile>,
+  element:<PrivateRoute><UserProfile></UserProfile></PrivateRoute>,
 },
 {
   path:'/Estates/:id',
-  element:<EstateDetail></EstateDetail>,
+  element:<PrivateRoute><EstateDetail></EstateDetail></PrivateRoute>,
   loader: ()=> fetch('../public/Estate Data/EstatesData.json')
 
 },

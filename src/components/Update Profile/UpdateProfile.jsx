@@ -20,7 +20,8 @@ const Update=e=>{
     const photo=form.get('photo url');
     updateProfile(user,{
         displayName:name,
-        photoURL:photo
+        photoURL:photo,
+        
       })
 }
 

@@ -36,10 +36,10 @@ const {id,location,area,image,Rent,facilities,title,visit,status,Rentfrom}=estat
     <h3>Visit Date: {visit}</h3></div>
 </div>
 
-    <div className="lg:flex text-center space-x-9 pt-5">
+    <div className="lg:flex text-center space-x-9 ml-4 pt-5">
         <div className="badge bg-sky-200 text-sky-400 bg-opacity-50 badge-outline p-4">Status: {status}</div>
         <div className="badge bg-orange-400 text-orange-600 bg-opacity-50 badge-outline p-4">Rent From: {Rentfrom}</div>
-       <div className="lg:-mt-2 mt-6 pb-3" > <Link to={`/book/${id}`}>   
+       <div className="lg:-mt-2 mt-6 pb-3" > <Link to={`/Estates/${id}`}>   
 <button className="btn btn-primary bg-green-400 rounded-3xl">View Details</button>
 </Link></div>
     </div>

@@ -1,8 +1,16 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../../Providers/AuthProvider";
+import { useContext, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext, auth } from "../../Providers/AuthProvider";
+import { signInWithPopup,GoogleAuthProvider,FacebookAuthProvider  } from "firebase/auth";
+import { FaGoogle,FaFacebook  } from "react-icons/fa";
 
 const Login = () => {
+ 
+    document.title="Login";
+
+  const navigate=useNavigate();
+const location=useLocation();
+
 const {signIn}=useContext(AuthContext);
 
 const handleLogin =e=>{
@@ -10,9 +18,31 @@ const handleLogin =e=>{
 const form=new FormData(e.currentTarget);
 const email=form.get('email');
 const password=form.get('password');
-    signIn(email,password);
+    signIn(email,password)
+    .then(()=>{alert("Login Successful");
+      navigate(location?.state? location.state:'/');
+    })
+.catch((error) => {
+    alert(error.message);
+  }
+)
+}
+const providerGoogle= new GoogleAuthProvider();
+const providerFacebook = new FacebookAuthProvider();
 
-
+const handleGoogle=()=>{
+  signInWithPopup(auth, providerGoogle)
+  .then(()=>{alert("Login Successful");
+  navigate(location?.state? location.state:'/');
+})
+  .catch(error=>{alert(error)})
+}
+const handleFacebook=()=>{
+  signInWithPopup(auth, providerFacebook)
+  .then(()=>{alert("Login Successful");
+   navigate(location?.state? location.state:'/');
+ })
+  .catch(error=>{alert(error)})
 }
 
     return (
@@ -43,11 +73,19 @@ const password=form.get('password');
         </div>
 </form>
 <p>Don't have an account? <span className="text-orange-600 "><Link to={'/Register'}>Register</Link></span> </p>
+<p className="text-black font-bold text-2xl text-center">Sign-In with:</p>
 
+<div className="flex space-x-20 mt-4 ">
+  <div><button onClick={handleGoogle} className="btn btn-primary bg-orange-500 font-bold"><FaGoogle /> Google  </button></div>
+  <div><button onClick={handleFacebook} className="btn btn-primary bg-blue-500 font-bold"><FaFacebook /> Facebook </button></div>
+</div>
     </div>
     
   </div>
-</div></div>
+</div>
+
+
+</div>
     );
 };
 

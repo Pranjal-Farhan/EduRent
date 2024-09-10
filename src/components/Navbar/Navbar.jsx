@@ -39,7 +39,14 @@ const handleLogout=()=>{
   {
 user?
 <div className="navbar-end">
-<button onClick={handleLogout} className="btn btn-primary">Logout</button>
+  <div className="flex space-x-4">
+  <div className="avatar">
+  <div className="w-12 rounded-full ">
+    <img src= {user.photoURL} />
+  </div>
+</div>  <button onClick={handleLogout} className="btn btn-primary">Logout</button>
+
+  </div>
   </div>
   :<div className="navbar-end">
 <Link to={'/Login'}><button className="btn btn-primary">Login</button></Link>
